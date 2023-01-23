@@ -2,28 +2,46 @@
 #include <string.h>
 #include "./constants.h"
 
-int replace(char* source, char search[], char replace[]) {
-        char* value = (char *)malloc( ( strlen(source) - strlen(search) ) + strlen(replace) );
- 
-        char* start = strstr(source, search);
-        strncpy(value, source, *start); 
-
-        printf("%s\n", value);
-
-        return 0;
+void addEscapeSeq(char *ptr)
+{
+	char *temp;
+	while (strstr(ptr, "\\n") || strstr(ptr, "\\t") || strstr(ptr, "\\r"))
+	{
+		if (temp = strstr(ptr, "\\n"))
+		{
+			*temp = 10;
+			strcpy(temp + 1, temp + 2);
+		}
+		else if (temp = strstr(ptr, "\\r"))
+		{
+			*temp = 13;
+			strcpy(temp + 1, temp + 2);
+		}
+		else if (temp = strstr(ptr, "\\t"))
+		{
+			*temp = 9;
+			strcpy(temp + 1, temp + 2);
+		}
+	}
 }
 
-int main(int argc, char const *argv[]) {
-        if (argc > 1) {
-                if (strcmp(argv[1], "-e") == 0) {
-                        printf("escape characters");
-                } else {
-                        // print as is
-                        printf("%s", argv[1]);
-                }
+int main(int argc, char const *argv[])
+{
+	if (argc > 1)
+	{
+		if (strcmp(argv[1], "-e") == 0)
+		{
+			const char *str = argv[2];
+			addEscapeSeq(str);
+			printf("%s", str);
+		}
+		else
+		{
+			// print as is
+			printf("%s", argv[1]);
+		}
+	}
 
-        }
-
-        printf("%s", newLineCharacter);
-        return 0;
+	printf("%s", newLineCharacter);
+	return 0;
 }
