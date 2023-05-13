@@ -31,17 +31,24 @@ int main(int argc, char const *argv[])
 	{
 		if (strcmp(argv[1], "-e") == 0)
 		{
-			const char *str = argv[2];
+			char *str = argv[2];
 			addEscapeSeq(str);
 			printf("%s", str);
+			printf("%s", newLineCharacter);
 		}
 		else
 		{
-			// print as is
-			printf("%s", argv[1]);
+			if (strcmp(argv[1], "-n") == 0)
+			{
+				printf("%s", argv[2]);
+			}
+			else
+			{
+				printf("%s", argv[1]);
+				printf("%s", newLineCharacter);
+			}
 		}
 	}
 
-	printf("%s", newLineCharacter);
 	return 0;
 }
