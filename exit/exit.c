@@ -1,11 +1,7 @@
-int main(int argc, char const *argv[])
-{
-	if (argc > 1)
-	{
+int main(int argc, char const *argv[]) {
+	if (argc > 1) {
 		exit(argv[1]);
-	}
-	else
-	{
+	} else {
 		exit(0);
 	}
 
