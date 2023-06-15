@@ -14,10 +14,10 @@ int main(int argc, const char *argv[]) {
     }
 
     if (strcmp(argv[1], "--version") == 0) {
-        printf("%s", version);
+        printf("%s\n", version);
         return 0;
     } else if (strcmp(argv[1], "--help") == 0) {
-        printf("%s", helpDocs);
+        printf("%s\n", helpDocs);
         return 0;
     }
 
