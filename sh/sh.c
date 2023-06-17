@@ -3,7 +3,7 @@
 #include <sys/stat.h>
 #include <stdbool.h>
 #include <string.h>
-#include "./constants.h"
+#include "sh.h"
 
 bool fileExists(char *filename) {
   struct stat buffer;
@@ -23,19 +23,36 @@ int main(int argc, char const *argv[]) {
         return 0;
     }
 
-
+    char currentPathHead[256] = "./";
     while (true) {
         char command[256] = "";
-        printf("sh-%s%s", version, prompt);
-        scanf("%s", &command);
-
-        // search through all paths for a file which matches the command
+        char commandArgs[256] = "";
         bool commandFound = false;
-        for (int i = 0; i < sizeof(paths); i++) {
-            char *constructedCommand = strcat(paths[i], command);
-            if (fileExists(constructedCommand)) {
-                commandFound = true;
-                system(constructedCommand);
+
+        printf("sh-%s%s", version, prompt);
+        scanf("%s%s", &command, &commandArgs);
+
+        // cd command
+        if (strcmp(command, "cd") == 0) {
+            strcpy(currentPathHead, commandArgs);
+            commandFound = true;
+        }
+
+        // search through current directory
+        char *currentDirectoryCommand = strcat(currentPathHead, command);
+        if (fileExists(currentDirectoryCommand) && !commandFound) {
+            system(command);
+            commandFound = true;
+        }
+
+        if (!commandFound) {
+            // search through all paths for a file which matches the command
+            for (int i = 0; i < sizeof(paths); i++) {
+                char *constructedCommand = strcat(paths[i], command);
+                if (fileExists(constructedCommand) && !commandFound) {
+                    system(constructedCommand);
+                    commandFound = true;
+                }
             }
         }
 
