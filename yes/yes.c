@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include "./constants.h"
+#include "yes.h"
 
 void defaultPrint() {
     while (true) {

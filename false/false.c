@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "constants.h"
+#include "false.h"
 
 int main(int argc, char const *argv[]) {
     // the GNU cli doesn't actually implement --help and --version in their implementation

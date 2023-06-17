@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "constants.h"
+#include "arch.h"
 
 void readFile(char *fileName) {
     char c;

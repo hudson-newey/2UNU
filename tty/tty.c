@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <string.h>
-#include "./constants.h"
+#include "tty.h"
 
 int main(int argc, char const *argv[]) {
     bool isSilent = false;

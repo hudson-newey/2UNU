@@ -1,8 +1,8 @@
-#include "constants.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 #include <stdbool.h>
+#include "pwd.h"
 
 void printCurrentPath(bool includeSymLinks) {
     char buff[FILENAME_MAX];

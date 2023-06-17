@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include "./constants.h"
+#include "sleep.h"
 
 int main(int argc, const char *argv[]) {
     if (argc < 2) {

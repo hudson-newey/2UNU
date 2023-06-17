@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include "./constants.h"
+#include "echo.h"
 
 #define false 0
 #define true 1
