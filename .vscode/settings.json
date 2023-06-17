@@ -5,7 +5,9 @@
         "stdbool.h": "c",
         "stdlib.h": "c",
         "stdio.h": "c",
-        "atomic": "c"
+        "atomic": "c",
+        "ls.h": "c",
+        "dirent.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "files.insertFinalNewline": true,
