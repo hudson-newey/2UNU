@@ -4,7 +4,8 @@
         "string.h": "c",
         "stdbool.h": "c",
         "stdlib.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "atomic": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "files.insertFinalNewline": true,
