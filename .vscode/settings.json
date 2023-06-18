@@ -9,7 +9,8 @@
         "ls.h": "c",
         "dirent.h": "c",
         "false.h": "c",
-        "functional": "c"
+        "functional": "c",
+        "mv.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "files.insertFinalNewline": true,
