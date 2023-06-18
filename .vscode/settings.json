@@ -10,7 +10,8 @@
         "dirent.h": "c",
         "false.h": "c",
         "functional": "c",
-        "mv.h": "c"
+        "mv.h": "c",
+        "time.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "files.insertFinalNewline": true,
