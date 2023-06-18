@@ -3,7 +3,7 @@
 #include <string.h>
 #include "arch.h"
 
-void readFile(char *fileName) {
+void printFile(char *fileName) {
     char c;
     FILE *file = fopen(fileName, "r");
 
@@ -26,7 +26,7 @@ int main(int argc, char const *argv[]) {
     }
 
     // TODO: I should probably parse the /proc/cpuinfo file to keep it in spec with GNU
-    readFile("/proc/cpuinfo");
+    printFile("/proc/cpuinfo");
 
     return 0;
 }

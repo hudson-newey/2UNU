@@ -42,7 +42,7 @@ void writeToFile(char *filePath, char *content) {
     fclose(fp);
 }
 
-bool file_exists(char *filePath) {
+bool fileExists(char *filePath) {
   struct stat buffer;
   return stat(filePath, &buffer) == 0;
 }
@@ -65,7 +65,7 @@ int main(int argc, const char *argv[]) {
 
     // if the file exists, update the modified time
     // otherwise, create an empty file
-    if (file_exists(filePath)) {
+    if (fileExists(filePath)) {
         char *fileContents = readFile(filePath);
         writeToFile(filePath, fileContents);
     } else {
