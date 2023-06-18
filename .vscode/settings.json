@@ -11,7 +11,10 @@
         "false.h": "c",
         "functional": "c",
         "mv.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "mkdir.h": "c",
+        "errno.h": "c",
+        "unistd.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "files.insertFinalNewline": true,
