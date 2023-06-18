@@ -8,7 +8,8 @@
         "atomic": "c",
         "ls.h": "c",
         "dirent.h": "c",
-        "false.h": "c"
+        "false.h": "c",
+        "functional": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "files.insertFinalNewline": true,
