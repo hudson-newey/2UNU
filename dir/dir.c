@@ -3,14 +3,14 @@
 #include <sys/stat.h>
 #include <stdbool.h>
 #include <dirent.h>
-#include "ls.h"
+#include "dir.h"
 
 void listDirectory(char *path) {
     DIR *d;
     struct dirent *dir;
     d = opendir(".");
     while ((dir = readdir(d)) != NULL) {
-        printf("%s\n", dir->d_name);
+        printf("drwxr-xr-x 1 grathium grathium    16 Jun 17 17:00 %s\n", dir->d_name);
     }
     closedir(d);
 }
@@ -45,7 +45,7 @@ int main(int argc, char const *argv[]) {
     if (isDirectory(path)) {
         listDirectory(path);
     } else {
-        printf("ls: cannot access '%s': No such file or directory\n", path);
+        printf("dir: cannot access '%s': No such file or directory\n", path);
         return 2;
     }
 
