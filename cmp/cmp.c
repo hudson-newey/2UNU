@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "cmp.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char const *argv[]) {
     if (argc < 2) {
         printf("cmp: missing operand after 'cmp'\ncmp: Try 'cmp --help' for more information.\n");
         return 2;
