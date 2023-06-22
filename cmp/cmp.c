@@ -24,7 +24,7 @@ int main(int argc, const char *argv[]) {
         FILE *file;
         file = fopen(fileOne, "r");
 
-        unsigned char buffer[8];
+        char buffer[8];
         bool foundDifference = false;
         while(*buffer != EOF) {
             scanf("%c", &buffer);
