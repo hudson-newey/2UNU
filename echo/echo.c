@@ -22,12 +22,14 @@ void addEscapeSeq(char *ptr) {
 	}
 }
 
-bool contains(char array[128][], char item[128]) {
+bool contains(char *array[], char item[128]) {
 	for (int i = 0; i < sizeof(array); i++) {
 		if (strcmp(array[i], item) == 0) {
 			return true;
 		}
 	}
+
+	return false;
 }
 
 int main(int argc, char const *argv[]) {
