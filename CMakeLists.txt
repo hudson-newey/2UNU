@@ -16,6 +16,7 @@ add_executable(exit ./exit/exit.c)
 add_executable(expand ./expand/expand.c)
 add_executable(export ./export/export.c)
 add_executable(false ./false/false.c)
+add_executable(head ./head/head.c)
 add_executable(hostname ./hostname/hostname.c)
 add_executable(ln ./ln/ln.c)
 add_executable(logname ./logname/logname.c)
@@ -54,6 +55,7 @@ set_target_properties(
     expand
     export
     false
+    head
     hostname
     ln
     logname
