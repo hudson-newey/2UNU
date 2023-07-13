@@ -31,6 +31,7 @@ add_executable(rmdir ./rmdir/rmdir.c)
 add_executable(sh ./sh/sh.c)
 add_executable(sleep ./sleep/sleep.c)
 add_executable(sort ./sort/sort.c)
+add_executable(tail ./tail/tail.c)
 add_executable(touch ./touch/touch.c)
 add_executable(true ./true/true.c)
 add_executable(tty ./tty/tty.c)
@@ -70,6 +71,7 @@ set_target_properties(
     sh
     sleep
     sort
+    tail
     touch
     true
     tty

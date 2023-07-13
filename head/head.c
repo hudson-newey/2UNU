@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
+#include <sys/stat.h>
 #include "head.h"
 
 void fileHead(char *filePath, int lines) {
@@ -33,6 +35,11 @@ int main(int argc, const char *argv[]) {
 
     const char *filePath = argv[1];
     int n = 10;
+
+    if (!fileExists(filePath)) {
+        printf("head: cannot open '%s' for reading: No such file or directory\n", filePath);
+        return 1;
+    }
 
     fileHead(filePath, n);
 
