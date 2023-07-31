@@ -24,7 +24,7 @@ void fileTail(char *filePath, int n) {
     }
 
     fseek(file, currentPosition, SEEK_SET);
-    int ch;
+    char ch;
     while ((ch = fgetc(file)) != EOF) {
         putchar(ch);
     }

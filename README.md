@@ -31,8 +31,8 @@ cd ./build/
 cmake ..
 ```
 
-5. Run make
+5. Compile applications
 
 ```sh
-make
+cmake --build .
 ```
