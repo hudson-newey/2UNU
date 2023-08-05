@@ -12,6 +12,7 @@ add_executable(cp ./cp/cp.c)
 add_executable(date ./date/date.c)
 add_executable(dir ./dir/dir.c)
 add_executable(echo ./echo/echo.c)
+add_executable(env ./env/env.c)
 add_executable(exit ./exit/exit.c)
 add_executable(expand ./expand/expand.c)
 add_executable(export ./export/export.c)
@@ -53,6 +54,7 @@ set_target_properties(
     date
     dir
     echo
+    env
     exit
     expand
     export
