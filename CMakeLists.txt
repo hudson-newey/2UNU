@@ -39,6 +39,7 @@ add_executable(true ./true/true.c)
 add_executable(tty ./tty/tty.c)
 add_executable(uname ./uname/uname.c)
 add_executable(uptime ./uptime/uptime.c)
+add_executable(users ./users/users.c)
 add_executable(who ./who/who.c)
 add_executable(whoami ./whoami/whoami.c)
 add_executable(yes ./yes/yes.c)
@@ -81,6 +82,7 @@ set_target_properties(
     tty
     uname
     uptime
+    users
     who
     whoami
     yes
