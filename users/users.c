@@ -4,6 +4,21 @@
 #include <utmp.h>
 #include "users.h"
 
+void listAllUsers() {
+    struct utmp *n;
+    setutent();
+    n = getutent();
+
+    while (n) {
+        if (n->ut_type == USER_PROCESS) {
+            printf("%s ", n->ut_user);
+        }
+        n = getutent();
+    }
+
+    printf("\n");
+}
+
 int main(int argc, const char *argv[]) {
     if (argc > 1) {
         if (strcmp(argv[1], "--version") == 0) {
@@ -12,20 +27,7 @@ int main(int argc, const char *argv[]) {
             printf("%s\n", helpDocs);
         }
     } else {
-
-        struct utmp *n;
-        setutent();
-        n = getutent();
-
-        while (n) {
-            if (n->ut_type == USER_PROCESS)
-            {
-                printf("%s ", n->ut_user);
-            }
-            n = getutent();
-        }
-
-        printf("\n");
+        listAllUsers();
     }
 
     return 0;
