@@ -5,9 +5,9 @@
 #include <sys/stat.h>
 #include "cat.h"
 
-void printFile(char *fileName) {
+void printFile(char *filePath) {
     char c;
-    FILE *file = fopen(fileName, "r");
+    FILE *file = fopen(filePath, "r");
 
     while ((c = getc(file)) != EOF) {
         printf("%c", c);
