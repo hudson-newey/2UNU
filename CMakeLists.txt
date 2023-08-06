@@ -4,6 +4,7 @@ project(MyProject)
 
 # Add each C file as an executable
 add_executable(arch ./arch/arch.c)
+add_executable(basename ./basename/basename.c)
 add_executable(cat ./cat/cat.c)
 add_executable(chown ./chown/chown.c)
 add_executable(clear ./clear/clear.c)
@@ -20,6 +21,7 @@ add_executable(false ./false/false.c)
 add_executable(head ./head/head.c)
 add_executable(history ./history/history.c)
 add_executable(hostname ./hostname/hostname.c)
+add_executable(id ./id/id.c)
 add_executable(ln ./ln/ln.c)
 add_executable(logname ./logname/logname.c)
 add_executable(ls ./ls/ls.c)
@@ -48,6 +50,7 @@ add_executable(yes ./yes/yes.c)
 # Set the output directory for the executables
 set_target_properties(
     arch
+    basename
     cat
     chown
     clear
@@ -64,6 +67,7 @@ set_target_properties(
     head
     history
     hostname
+    id
     ln
     logname
     ls
