@@ -28,6 +28,8 @@ add_executable(ls ./ls/ls.c)
 add_executable(man ./man/man.c)
 add_executable(mkdir ./mkdir/mkdir.c)
 add_executable(mv ./mv/mv.c)
+add_executable(nl ./nl/nl.c)
+add_executable(printenv ./printenv/printenv.c)
 add_executable(printf ./printf/printf.c)
 add_executable(pwd ./pwd/pwd.c)
 add_executable(rm ./rm/rm.c)
@@ -74,6 +76,8 @@ set_target_properties(
     man
     mkdir
     mv
+    nl
+    printenv
     printf
     pwd
     rm
