@@ -1,9 +1,14 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(MyProject)
+project(2UNU)
 
 # Add each C file as an executable
 add_executable(arch ./arch/arch.c)
+
+add_executable(base64 ./base64/base64.c)
+target_include_directories(base64 PRIVATE include)
+target_link_libraries(base64 PRIVATE crypto m)
+
 add_executable(basename ./basename/basename.c)
 add_executable(cat ./cat/cat.c)
 add_executable(chown ./chown/chown.c)
@@ -52,6 +57,7 @@ add_executable(yes ./yes/yes.c)
 # Set the output directory for the executables
 set_target_properties(
     arch
+    base64
     basename
     cat
     chown
