@@ -17,6 +17,7 @@ add_executable(cmp ./cmp/cmp.c)
 add_executable(cp ./cp/cp.c)
 add_executable(date ./date/date.c)
 add_executable(dir ./dir/dir.c)
+add_executable(dirname ./dirname/dirname.c)
 add_executable(echo ./echo/echo.c)
 add_executable(env ./env/env.c)
 add_executable(exit ./exit/exit.c)
@@ -66,6 +67,7 @@ set_target_properties(
     cp
     date
     dir
+    dirname
     echo
     env
     exit

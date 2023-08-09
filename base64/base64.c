@@ -162,7 +162,4 @@ int main(int argc, const char *argv[])
     printf("%s\n", base64Encoding);
 
     return 0;
-
-    // const char *filePath = argv[1];
-    // return base64EncodeFile(filePath);
 }
