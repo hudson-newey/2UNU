@@ -16,7 +16,8 @@
         "errno.h": "c",
         "unistd.h": "c",
         "evp.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "base64.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "files.insertFinalNewline": true,

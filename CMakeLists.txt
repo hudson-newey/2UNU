@@ -18,6 +18,7 @@ add_executable(cp ./cp/cp.c)
 add_executable(date ./date/date.c)
 add_executable(dir ./dir/dir.c)
 add_executable(dirname ./dirname/dirname.c)
+add_executable(dos2unix ./dos2unix/dos2unix.c)
 add_executable(echo ./echo/echo.c)
 add_executable(env ./env/env.c)
 add_executable(exit ./exit/exit.c)
@@ -69,6 +70,7 @@ set_target_properties(
     date
     dir
     dirname
+    dos2unix
     echo
     env
     exit
