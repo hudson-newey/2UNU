@@ -40,9 +40,11 @@ add_executable(pkill ./pkill/pkill.c)
 add_executable(printenv ./printenv/printenv.c)
 add_executable(printf ./printf/printf.c)
 add_executable(pwd ./pwd/pwd.c)
+add_executable(reboot ./reboot/reboot.c)
 add_executable(rm ./rm/rm.c)
 add_executable(rmdir ./rmdir/rmdir.c)
 add_executable(sh ./sh/sh.c)
+add_executable(shutdown ./shutdown/shutdown.c)
 add_executable(sleep ./sleep/sleep.c)
 add_executable(sort ./sort/sort.c)
 add_executable(sum ./sum/sum.c)
@@ -93,9 +95,11 @@ set_target_properties(
     printenv
     printf
     pwd
+    reboot
     rm
     rmdir
     sh
+    shutdown
     sleep
     sort
     sum
