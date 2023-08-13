@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/reboot.h>
-#include "reboot.h"
+#include "shutdown.h"
 
 int main(int argc, const char *argv[]) {
     if (argc > 1) {
