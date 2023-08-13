@@ -17,6 +17,7 @@ add_executable(cmp ./cmp/cmp.c)
 add_executable(cp ./cp/cp.c)
 add_executable(date ./date/date.c)
 add_executable(dir ./dir/dir.c)
+add_executable(dircolors ./dircolors/dircolors.c)
 add_executable(dirname ./dirname/dirname.c)
 add_executable(dos2unix ./dos2unix/dos2unix.c)
 add_executable(echo ./echo/echo.c)
@@ -72,6 +73,7 @@ set_target_properties(
     cp
     date
     dir
+    dircolors
     dirname
     dos2unix
     echo
