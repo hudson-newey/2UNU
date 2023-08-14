@@ -11,6 +11,7 @@ target_link_libraries(base64 PRIVATE crypto m)
 
 add_executable(basename ./basename/basename.c)
 add_executable(cat ./cat/cat.c)
+add_executable(chgrp ./chgrp/chgrp.c)
 add_executable(chown ./chown/chown.c)
 add_executable(clear ./clear/clear.c)
 add_executable(cmp ./cmp/cmp.c)
@@ -67,6 +68,7 @@ set_target_properties(
     base64
     basename
     cat
+    chgrp
     chown
     clear
     cmp
