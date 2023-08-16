@@ -59,6 +59,11 @@ add_executable(tty ./tty/tty.c)
 add_executable(uname ./uname/uname.c)
 add_executable(uptime ./uptime/uptime.c)
 add_executable(users ./users/users.c)
+
+add_executable(wget ./wget/wget.c)
+target_include_directories(wget PRIVATE include)
+target_link_libraries(wget PRIVATE curl)
+
 add_executable(who ./who/who.c)
 add_executable(whoami ./whoami/whoami.c)
 add_executable(yes ./yes/yes.c)
@@ -117,6 +122,7 @@ set_target_properties(
     uname
     uptime
     users
+    wget
     who
     whoami
     yes
