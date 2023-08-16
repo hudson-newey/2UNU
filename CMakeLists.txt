@@ -5,6 +5,8 @@ project(2UNU)
 # Add each C file as an executable
 add_executable(arch ./arch/arch.c)
 
+add_library(curl_lib STATIC ./curl/curl.c)
+
 add_executable(base64 ./base64/base64.c)
 target_include_directories(base64 PRIVATE include)
 target_link_libraries(base64 PRIVATE crypto m)
@@ -15,7 +17,11 @@ add_executable(chgrp ./chgrp/chgrp.c)
 add_executable(chown ./chown/chown.c)
 add_executable(clear ./clear/clear.c)
 add_executable(cmp ./cmp/cmp.c)
+
 add_executable(cp ./cp/cp.c)
+target_include_directories(curl_lib PRIVATE include)
+target_link_libraries(curl_lib PRIVATE curl)
+
 add_executable(date ./date/date.c)
 add_executable(dir ./dir/dir.c)
 add_executable(dircolors ./dircolors/dircolors.c)
@@ -62,7 +68,7 @@ add_executable(users ./users/users.c)
 
 add_executable(wget ./wget/wget.c)
 target_include_directories(wget PRIVATE include)
-target_link_libraries(wget PRIVATE curl)
+target_link_libraries(wget PRIVATE curl_lib)
 
 add_executable(who ./who/who.c)
 add_executable(whoami ./whoami/whoami.c)
@@ -79,6 +85,7 @@ set_target_properties(
     clear
     cmp
     cp
+    curl_lib
     date
     dir
     dircolors
