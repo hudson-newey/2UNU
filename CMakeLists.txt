@@ -37,6 +37,7 @@ add_executable(head ./head/head.c)
 add_executable(history ./history/history.c)
 add_executable(hostname ./hostname/hostname.c)
 add_executable(id ./id/id.c)
+add_executable(kill ./kill/kill.c)
 add_executable(link ./link/link.c)
 add_executable(ln ./ln/ln.c)
 add_executable(logname ./logname/logname.c)
@@ -102,6 +103,7 @@ set_target_properties(
     history
     hostname
     id
+    kill
     link
     ln
     logname
