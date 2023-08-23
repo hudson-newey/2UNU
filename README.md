@@ -36,4 +36,3 @@ cmake ..
 ```sh
 cmake --build .
 ```
-sdas
