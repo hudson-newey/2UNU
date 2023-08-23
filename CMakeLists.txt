@@ -43,6 +43,7 @@ add_executable(logname ./logname/logname.c)
 add_executable(ls ./ls/ls.c)
 add_executable(man ./man/man.c)
 add_executable(mkdir ./mkdir/mkdir.c)
+add_executable(mkfile ./mkfile/mkfile.c)
 add_executable(mv ./mv/mv.c)
 add_executable(nl ./nl/nl.c)
 add_executable(pkill ./pkill/pkill.c)
@@ -107,6 +108,7 @@ set_target_properties(
     ls
     man
     mkdir
+    mkfile
     mv
     nl
     pkill
