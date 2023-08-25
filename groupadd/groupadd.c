@@ -12,14 +12,17 @@ bool groupExists(const char *groupName)
     return foundGroup != NULL;
 }
 
-__gid_t nextGroupNumberAvailable() {
+__gid_t nextGroupNumberAvailable()
+{
     setgrent();
 
     __gid_t maxGroupId = 0;
     struct group *foundGroup;
 
-    while ((foundGroup = getgrent()) != NULL) {
-        if (foundGroup->gr_gid > maxGroupId) {
+    while ((foundGroup = getgrent()) != NULL)
+    {
+        if (foundGroup->gr_gid > maxGroupId)
+        {
             maxGroupId = foundGroup->gr_gid;
         }
     }

@@ -18,7 +18,8 @@
         "evp.h": "c",
         "stdint.h": "c",
         "base64.h": "c",
-        "grp.h": "c"
+        "grp.h": "c",
+        "types.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "files.insertFinalNewline": true,
