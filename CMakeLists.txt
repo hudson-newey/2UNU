@@ -33,6 +33,7 @@ add_executable(exit ./exit/exit.c)
 add_executable(expand ./expand/expand.c)
 add_executable(export ./export/export.c)
 add_executable(false ./false/false.c)
+add_executable(groupadd ./groupadd/groupadd.c)
 add_executable(head ./head/head.c)
 add_executable(history ./history/history.c)
 add_executable(hostname ./hostname/hostname.c)
@@ -99,6 +100,7 @@ set_target_properties(
     expand
     export
     false
+    groupadd
     head
     history
     hostname
