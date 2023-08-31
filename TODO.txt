@@ -1,0 +1,5 @@
+I'm currently working through the commands documented on https://ss64.com/bash/
+However, there are some that aren't documented here
+
+Commands that I need to complete:
+* pidof
