@@ -56,6 +56,7 @@ add_executable(mkfile ./mkfile/mkfile.c)
 add_executable(mktemp ./mktemp/mktemp.c)
 add_executable(mv ./mv/mv.c)
 add_executable(nl ./nl/nl.c)
+add_executable(pidof ./pidof/pidof.c)
 add_executable(pkill ./pkill/pkill.c)
 add_executable(printenv ./printenv/printenv.c)
 add_executable(printf ./printf/printf.c)
@@ -127,6 +128,7 @@ set_target_properties(
     mktemp
     mv
     nl
+    pidof
     pkill
     printenv
     printf
