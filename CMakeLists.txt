@@ -56,6 +56,11 @@ add_executable(mkfile ./mkfile/mkfile.c)
 add_executable(mktemp ./mktemp/mktemp.c)
 add_executable(mv ./mv/mv.c)
 add_executable(nl ./nl/nl.c)
+
+add_executable(passwd ./passwd/passwd.c)
+target_include_directories(gzip PRIVATE include)
+target_link_libraries(gzip PRIVATE crypt)
+
 add_executable(pidof ./pidof/pidof.c)
 add_executable(pkill ./pkill/pkill.c)
 add_executable(printenv ./printenv/printenv.c)
@@ -128,6 +133,7 @@ set_target_properties(
     mktemp
     mv
     nl
+    passwd
     pidof
     pkill
     printenv
