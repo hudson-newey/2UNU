@@ -15,6 +15,7 @@ add_executable(basename ./basename/basename.c)
 add_executable(cat ./cat/cat.c)
 add_executable(chgrp ./chgrp/chgrp.c)
 add_executable(chown ./chown/chown.c)
+add_executable(chmod ./chmod/chmod.c)
 add_executable(clear ./clear/clear.c)
 add_executable(cmp ./cmp/cmp.c)
 
@@ -50,6 +51,8 @@ add_executable(link ./link/link.c)
 add_executable(ln ./ln/ln.c)
 add_executable(logname ./logname/logname.c)
 add_executable(ls ./ls/ls.c)
+add_executable(lscpu ./lscpu/lscpu.c)
+add_executable(lspci ./lspci/lspci.c)
 add_executable(man ./man/man.c)
 add_executable(mkdir ./mkdir/mkdir.c)
 add_executable(mkfile ./mkfile/mkfile.c)
@@ -58,8 +61,8 @@ add_executable(mv ./mv/mv.c)
 add_executable(nl ./nl/nl.c)
 
 add_executable(passwd ./passwd/passwd.c)
-target_include_directories(gzip PRIVATE include)
-target_link_libraries(gzip PRIVATE crypt)
+target_include_directories(passwd PRIVATE include)
+target_link_libraries(passwd PRIVATE crypt)
 
 add_executable(pidof ./pidof/pidof.c)
 add_executable(pkill ./pkill/pkill.c)
@@ -80,6 +83,7 @@ add_executable(touch ./touch/touch.c)
 add_executable(true ./true/true.c)
 add_executable(tty ./tty/tty.c)
 add_executable(uname ./uname/uname.c)
+add_executable(uniq ./uniq/uniq.c)
 add_executable(uptime ./uptime/uptime.c)
 add_executable(users ./users/users.c)
 
@@ -99,6 +103,7 @@ set_target_properties(
     cat
     chgrp
     chown
+    chmod
     clear
     cmp
     cp
@@ -127,6 +132,8 @@ set_target_properties(
     ln
     logname
     ls
+    lscpu
+    lspci
     man
     mkdir
     mkfile
