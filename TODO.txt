@@ -7,3 +7,4 @@ Commands that I need to complete:
 * vi
 * dmidecode
 * size
+* namei
