@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <signal.h>
 #include <stdbool.h>
 #include <string.h>
 #include "sh.h"
@@ -69,6 +70,17 @@ int executeProgramCommand(char *command, char *commandArgs, char *pathHead)
     return 1;
 }
 
+void printInputText()
+{
+    printf("\nsh-%s%s", version, prompt);
+}
+
+void ctrlC_handler()
+{
+    printInputText();
+    printf("\n");
+}
+
 int runFromIoStream(const char *contents)
 {
     int i = 0;
@@ -83,12 +95,17 @@ int runFromIoStream(const char *contents)
 int readFromInput()
 {
     char currentPathHead[PATHS_BUFFER] = "./";
+
+    // overwrite ctrl + C as it should stop a foreground program, not stop sh
+    signal(SIGINT, ctrlC_handler);
+
     while (true)
     {
         char command[COMMAND_BUFFER] = "";
         char commandArgs[COMMAND_BUFFER] = "";
 
-        printf("\nsh-%s%s", version, prompt);
+        printInputText();
+
         char input[COMMAND_BUFFER];
         fgets(input, COMMAND_BUFFER, stdin);
         sscanf(input, "%s %s", command, commandArgs);
