@@ -57,6 +57,7 @@ add_executable(man ./man/man.c)
 add_executable(mkdir ./mkdir/mkdir.c)
 add_executable(mkfile ./mkfile/mkfile.c)
 add_executable(mktemp ./mktemp/mktemp.c)
+add_executable(mount ./mount/mount.c)
 add_executable(mv ./mv/mv.c)
 add_executable(nl ./nl/nl.c)
 
@@ -86,6 +87,8 @@ add_executable(uname ./uname/uname.c)
 add_executable(uniq ./uniq/uniq.c)
 add_executable(uptime ./uptime/uptime.c)
 add_executable(users ./users/users.c)
+add_executable(useradd ./useradd/useradd.c)
+add_executable(userdel ./userdel/userdel.c)
 
 add_executable(wget ./wget/wget.c)
 target_include_directories(wget PRIVATE include)
@@ -138,6 +141,7 @@ set_target_properties(
     mkdir
     mkfile
     mktemp
+    mount
     mv
     nl
     passwd
@@ -162,6 +166,8 @@ set_target_properties(
     uname
     uptime
     users
+    useradd
+    userdel
     wget
     who
     whoami
