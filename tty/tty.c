@@ -4,36 +4,52 @@
 #include <string.h>
 #include "tty.h"
 
-int main(int argc, char const *argv[]) {
-    bool isSilent = false;
+bool isSilent(int argc, const char *argv[])
+{
+    if (argc == 1)
+    {
+        return false;
+    }
 
-    if (argc > 1) {
-        if (
-            strcmp(argv[1], "-s") == 0 ||
-            strcmp(argv[1], "--silent") == 0 ||
-            strcmp(argv[1], "--quiet") == 0
-        ) {
-            isSilent = true;
-        }
+    return strcmp(argv[1], SILENT_CLA_SHORT) == 0 ||
+           strcmp(argv[1], SILENT_CLA_LONG) == 0 ||
+           strcmp(argv[1], QUIET_CLA) == 0;
+}
 
-        if (strcmp(argv[1], "--version") == 0) {
+int main(int argc, const char *argv[])
+{
+    if (argc > 1)
+    {
+        if (strcmp(argv[1], "--version") == 0)
+        {
             printf("%s\n", version);
             return 0;
         }
 
-        if (strcmp(argv[1], "--help") == 0) {
+        if (strcmp(argv[1], "--help") == 0)
+        {
             printf("%s\n", helpDocs);
             return 0;
         }
+
+        if (!isSilent(argc, argv))
+        {
+            printf(EXTRA_OPERAND_MESSAGE, argv[1]);
+            return 2;
+        }
     }
 
-    if (!isSilent) {
+    if (!isSilent(argc, argv))
+    {
         printf("%s\n", ttyname(fileno(stdout)));
     }
 
-    if (isatty(fileno(stdout)) == 1) {
+    if (isatty(fileno(stdout)) == 1)
+    {
         return 0;
-    } else {
+    }
+    else
+    {
         return 1;
     }
 }
