@@ -41,6 +41,15 @@ bool isDirectory(const char *path)
     return !stat(path, &s);
 }
 
+bool stringInArray(char* target, char* array[], size_t arraySize) {
+    for (size_t i = 0; i < arraySize; i++) {
+        if (strcmp(target, array[i]) == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
 int main(int argc, char const *argv[])
 {
     struct IOptions defaultOptions = {false};
@@ -68,7 +77,7 @@ int main(int argc, char const *argv[])
         }
 
         // cla flags
-        if (stringInArray(SHOW_HIDDEN_CLA, argv)) {
+        if (stringInArray(SHOW_HIDDEN_CLA, argv, argc)) {
             defaultOptions.showHidden = true;
         }
     }

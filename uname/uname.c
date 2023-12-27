@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <sys/utsname.h>
 #include "uname.h"
 
 int main(int argc, char const *argv[]) {
@@ -13,8 +14,11 @@ int main(int argc, char const *argv[]) {
         }
     }
 
-    // TODO: I need to make this better
-    printf("Linux\n");
+    struct utsname uts;
+    uname(&uts);
+    char *systemName = uts.sysname;
+
+    printf("%s\n", systemName);
 
     return 0;
 }

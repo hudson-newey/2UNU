@@ -164,6 +164,7 @@ set_target_properties(
     true
     tty
     uname
+    uniq
     uptime
     users
     useradd
