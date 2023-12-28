@@ -3,7 +3,7 @@
 #include <string.h>
 #include "cp.h"
 
-char* readFile(char *filePath) {
+char* readFile(const char *filePath) {
     char c;
     int i = 0;
     FILE *fp = fopen(filePath, "r");
@@ -31,7 +31,7 @@ char* readFile(char *filePath) {
     return output;
 }
 
-void writeToFile(char *filePath, char *content) {
+void writeToFile(const char *filePath, char *content) {
     FILE *fp = fopen(filePath, "w");
 
     fflush(stdin);
