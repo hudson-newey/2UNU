@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include "cat.h"
 
-void printFile(char *filePath)
+void printFile(const char *filePath)
 {
     char c;
     FILE *file = fopen(filePath, "r");
@@ -18,7 +18,7 @@ void printFile(char *filePath)
     fclose(file);
 }
 
-bool fileExists(char *filePath)
+bool fileExists(const char *filePath)
 {
     struct stat buffer;
     return stat(filePath, &buffer) == 0;
@@ -53,7 +53,7 @@ int main(int argc, const char *argv[])
 
     for (int i = 1; i < argc; i++)
     {
-        char *filePath = argv[i];
+        const char *filePath = argv[i];
         if (!fileExists(filePath))
         {
             printf("cat: %s: No such file or directory\n", filePath);

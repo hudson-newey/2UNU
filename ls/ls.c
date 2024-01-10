@@ -15,7 +15,7 @@ void listDirectory(const char *path, struct IOptions *options)
 {
     DIR *d;
     struct dirent *dir;
-    d = opendir(".");
+    d = opendir(path);
 
     while ((dir = readdir(d)) != NULL)
     {
